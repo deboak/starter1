@@ -13,4 +13,4 @@ const handler = async (req, res) => {
   return serverless(app)(req, res);
 };
 
-module.exports.handler = handler;
+module.exports = handler;
