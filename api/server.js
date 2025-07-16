@@ -2,8 +2,9 @@
 const serverless = require('serverless-http');
 const app = require('../app');
 const connectDB = require('../db/connect');
-
 let isConnected = false;
+
+
 
 const handler = async (req, res) => {
   if (!isConnected) {
