@@ -25,9 +25,7 @@ app.get('/', (req,res) => {
 
 // connectDB
 const connectDB = require('./db/connect');
-connectDB(process.env.MONGO_URI)
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(err => console.error('MongoDB connection error:', err));
+connectDB()
 // routes
 const authRouter = require('./routes/auth');
 const jobsRouter = require('./routes/jobs');
